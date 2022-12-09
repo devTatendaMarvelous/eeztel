@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" ] content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+
+<body>
+     <div id="data"></div>
+     <script>
+          const apiData = fetch('127.0.0.1:8000/api/dpts', { mode: "same-origin" }).then((res) => res.json())
+          const text = document.getElementById('data')
+          console.log(apiData)
+          text.innerHTML = apiData.data
+     </script>
+</body>
+
+</html>
